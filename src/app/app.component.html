@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  
+
+  <div id="text_box">
+      <div contenteditable="true" class="editable">
+        Some Content
+      </div>
+      <select id="select_font"  (change)="changeText('font');">
+        <option value="Arial">Arial</option>
+        <option value="Sans Serif" selected>Sans Serif</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Arial Black">Arial Black</option>
+        <option value="Impact">Impact</option>
+        <option value="Bookman">Bookman</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Palatino">Palatino</option>
+        <option value="Georgia">Georgia</option>
+      </select>
+      <select id="font_size" (change)="changeText('fontSize')">
+        <option *ngFor="let c of nums" [value]="c">{{c}}</option>
+  
+      </select>
+
+  </div>
+</body>
+
+</html>
